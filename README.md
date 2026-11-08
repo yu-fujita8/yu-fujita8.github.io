@@ -1,0 +1,1 @@
+# yu-fujita8.github.io

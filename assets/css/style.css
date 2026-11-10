@@ -1,1 +1,13 @@
 @charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+.header{
+  display:flex;
+  height:6rem;
+  background-color:red;
+}
+.header__logo{
+  width:4rem;
+  height:4rem;}

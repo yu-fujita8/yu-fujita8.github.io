@@ -136,7 +136,7 @@ background-color: var(--border-color);
 /* 線のアニメーション部分 */
 .scroll::before {
   animation: scroll 2s infinite;
-  background-color: #000;
+  background-color: var(--text-color);
   bottom: -115px;
   content: "";
   height: 100px;

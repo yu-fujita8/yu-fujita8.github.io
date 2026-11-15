@@ -81,7 +81,7 @@ a{
   position: relative;
   margin-bottom: 8rem;
 }
-.mv::after{
+/* .mv::after{
   content: "";
   display: block;
   position: absolute;
@@ -90,8 +90,8 @@ a{
   left: 50%;
   width: 60%;
   height: 0.1rem;
-background-color: var(--border-color);
-}
+  background-color: var(--border-color);
+} */
 .mv__title{
   text-align: center;
 }

@@ -130,6 +130,7 @@ background-color: var(--border-color);
   position: absolute;
   right: 10%;
   bottom: 10%;
+  transform: translateY(-100%);
   writing-mode: vertical-rl;
 }
 /* 線のアニメーション部分 */
@@ -369,7 +370,6 @@ background-color: var(--bg-color);
   /* スクロールダウンの位置 */
   .scroll {
     right: 3%;
-    bottom: 20%;
   }
   /* 線のアニメーション部分 */
   .scroll::before {

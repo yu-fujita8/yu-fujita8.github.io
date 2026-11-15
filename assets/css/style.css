@@ -2,12 +2,364 @@
 html {
   font-size: 62.5%;
 }
+:root {
+  --bg-color: #EDEDED;
+  --text-color: #333333;
+  --border-color: #C9C9C9;
+}
 
+body{
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  color: var(--text-color);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+ul {
+  list-style: none; /* 左側の「点（マーカー）」を消す */
+  margin: 0;        /* 外側の余白を消す */
+  padding: 0;       /* 内側の余白を消す */
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
 .header{
   display:flex;
   height:6rem;
-  background-color:red;
+background-color: var(--bg-color);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .header__logo{
-  width:4rem;
-  height:4rem;}
+  width:3rem;
+  height:3rem;}
+
+.header__link{
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+.header__link-text{
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  display: none;
+}
+.header__link::before{
+  content: "";
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background-image: url("../img/mail-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: .5rem;
+    vertical-align: -webkit-baseline-middle;
+
+}
+
+.mv{
+  display: flex;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 8rem;
+}
+.mv::after{
+  content: "";
+  display: block;
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: 0;
+  left: 50%;
+  width: 60%;
+  height: 0.1rem;
+background-color: var(--border-color);
+}
+.mv__title{
+  text-align: center;
+}
+.mv__text{
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+      font-size: 2.2rem;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.2em;
+}
+.mv__text--bottom{
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  font-style: normal;
+  margin-top: 1rem;
+}
+.intro{
+  padding: 0 2rem;
+  margin-bottom: 8rem;
+}
+
+.intro__lead{
+  text-align: center;
+  line-height: 2;
+}
+.intro__lead--title{
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.intro__lead-wrap{
+  margin-bottom: 4rem;
+}
+.intro__item{
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.intro__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  counter-reset: number 0;
+    padding: 0 2rem 0 3.5rem;
+margin-bottom: 3rem;
+}
+.intro__item{
+  position: relative;
+  
+}
+.intro__item::before{
+  display: block;
+  position: absolute;
+  left: -2rem;
+  counter-increment: number;
+  content: counter(number) ". ";
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+.intro__text{
+  text-align: center;
+  
+}
+
+.works__img-item{
+  
+}
+.works__img-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.works__title-item{
+  font-size: 1.5rem;
+}
+.works__title-item::before{
+  font-size: 1.3rem;
+  display: inline-block;
+    font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: italic;
+  margin-right: 0.5rem;
+  color: #6d6d6d;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+.works__title-item--area::before{
+  content: "AREA";
+}
+.works__title-item--type::before{
+  content: "TYPE";
+}
+.works__title-list{
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.works__title-list::after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 0.1rem;
+background-color: var(--border-color);
+  }
+.works__text-wrap{
+  padding: 0 2rem;
+}
+.works__tag-item{
+  font-size: 1.3rem;
+  border: 0.1rem solid var(--border-color);
+  text-box: trim-both cap alphabetic;
+  padding: 0.4rem 0.6rem;
+  border-radius: 100vmax;
+}
+.works__tag-list{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.works__item{
+  margin-bottom: 8rem;
+}
+.works__item:last-child{
+  margin-bottom: 0;
+}
+
+.works__list{
+  margin-bottom: 12rem;
+}
+
+.profile{
+padding: 0 4rem;
+margin-bottom: 10rem;
+}
+.profile__img{
+  margin-bottom: 2rem;
+}
+.profile__text-wrap{
+  line-height: 1;
+}
+.profile__name-en{
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+      font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.15em;
+      font-weight: 300;
+
+}
+.profile__name-ja{
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+.profile__mail{
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+}
+.profile__mail::before{
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("../img/mail-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: .5rem;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.footer{
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2rem 0;
+background-color: var(--bg-color);
+}
+.footer__text{
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+
+
+  /* タブレット以上 */
+  @media (min-width: 768px) {
+    .header{
+      padding: 0 4rem;
+    }
+    .header__link-text{
+      font-size: 1.5rem;
+      display: inline-block;
+    }
+    .mv{
+      margin-bottom: 10rem;
+    }
+    .mv__text{
+      font-size: 3.5rem;
+    }
+    .mv__text--bottom{
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
+    .intro{
+      padding: 0 4rem;
+      margin-bottom: 10rem;
+    }
+    .intro__list{
+      align-items: center;
+      gap: 2rem;
+      padding: 0 4rem;
+    }
+
+    .works{
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 3rem;
+    }
+    .works__list{
+      margin-bottom: 18rem;
+    }
+    .works__img-list{
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .works__img-item{
+      width: calc(50% - 0.5rem);
+    }
+    .works__title-item{
+      font-size: 1.8rem;
+    }
+    .works__title-item::before{
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+    .works__title-list{
+      gap: 4rem;
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .profile{
+      max-width: 700px;
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      padding: 0;
+      margin: 0 auto 15rem;
+    }
+    .profile__img{
+      width: 50%;
+    }
+    .profile__name-en{
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .profile__name-ja{
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .profile__mail{
+      font-size: 1.5rem;
+    }
+    .footer{
+      font-size: 1.8rem;
+    }
+  }

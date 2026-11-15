@@ -1,6 +1,11 @@
 @charset "UTF-8";
 html {
   font-size: 62.5%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 :root {
   --bg-color: #EDEDED;
@@ -25,6 +30,8 @@ a{
   text-decoration: none;
   color: inherit;
 }
+
+
 .header{
   display:flex;
   height:6rem;
@@ -118,14 +125,14 @@ background-color: var(--border-color);
     margin-top: 100vh;
     padding-top: 2rem;
 }
-/* スクロールダウン追加 */
+/* mvスクロールダウン追加 */
 .scroll__text{
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
   letter-spacing: 0.1em;
   font-weight: 300;
 }
-/* スクロールダウンの位置 */
+/* mvスクロールダウンの位置 */
 .scroll {
   position: absolute;
   right: 10%;

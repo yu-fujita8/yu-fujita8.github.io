@@ -1,0 +1,59 @@
+/* ============================================
+   Minimal Reset 2026
+   自分のCSSより前に読み込む
+   ============================================ */
+@layer reset {
+  /* 1. 幅と高さに padding と border を含める */
+  *, *::before, *::after { box-sizing: border-box; }
+
+  /* 2. スマホを横向きにしたときの文字サイズ自動拡大を止める / タブ幅を4に */
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; tab-size: 4; }
+
+  /* 3. height: auto へのアニメーションを許可（動きを減らす設定の人には適用しない） */
+  @media (prefers-reduced-motion: no-preference) {
+    html { interpolate-size: allow-keywords; }
+  }
+
+  /* 4. body の余白を消し、画面の高さいっぱいに。行間を読みやすく */
+  body { margin: 0; min-height: 100svh; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+
+  /* 5. 見出し・段落などの上下余白を消す（大きさと太さは残す） */
+  :where(h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd) { margin: 0; }
+
+  /* 6. 見出しの各行の長さを揃える */
+  :where(h1, h2, h3, h4, h5, h6) { text-wrap: balance; }
+
+  /* 7. 長い英単語やURLが箱からはみ出さないよう折り返す */
+  :where(p, li, dd, h1, h2, h3, h4, h5, h6) { overflow-wrap: break-word; }
+
+  /* 8. 段落の最後の行に1語だけ残る折り返しを減らす */
+  :where(p) { text-wrap: pretty; }
+
+  /* 9. role="list" を付けたリストだけ記号と余白を消す */
+  :where(ul[role="list"], ol[role="list"]) { margin: 0; padding: 0; list-style: none; }
+
+  /* 10. 画像・動画を親の幅に収め、下の隙間をなくす */
+  :where(img, picture, video, canvas, svg) { display: block; max-width: 100%; }
+
+  /* 11. width/height 属性があっても縦横比を保つ */
+  :where(img, video) { height: auto; }
+
+  /* 12. フォーム部品の文字を周りと同じフォント・色にする */
+  :where(input, button, textarea, select) { font: inherit; color: inherit; }
+
+  /* 13. textarea のサイズ変更を縦方向だけにする */
+  :where(textarea) { resize: vertical; }
+
+  /* 14. 表のセルの境界線を1本にまとめる */
+  :where(table) { border-collapse: collapse; }
+
+  /* 15. 動きを減らす設定の人にはアニメーションをほぼ止める */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

@@ -123,7 +123,7 @@ a{
 .contents{
   background: white;
     margin-top: 100vh;
-    padding-top: 2rem;
+    padding: 2rem 0 10rem 0;
 }
 /* mvスクロールダウン追加 */
 .scroll__text{
@@ -297,7 +297,6 @@ background-color: var(--border-color);
 
 .profile{
 padding: 0 4rem;
-margin-bottom: 10rem;
 }
 .profile__img{
   margin-bottom: 2rem;
@@ -383,6 +382,9 @@ background-color: var(--bg-color);
     bottom: -80px;
     height: 65px;
   }
+.contents{
+    padding: 4rem 0 18rem 0;
+}
 
 
   .intro{
@@ -429,7 +431,7 @@ background-color: var(--bg-color);
     gap: 4rem;
     align-items: center;
     padding: 0;
-    margin: 0 auto 15rem;
+    margin: 0 auto;
   }
   .profile__img{
     width: 50%;

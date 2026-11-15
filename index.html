@@ -11,8 +11,13 @@
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
-<header class="header">
-    <img src="assets/img/logo.svg" class="header__logo">
+  <header class="header">
+    <a href="index.html" class="header__logo-link">
+      <picture>
+        <source media="(max-width: 767px)" srcset="assets/img/logo_sp.svg">
+        <img src="assets/img/logo_pc.svg" class="header__logo">
+      </picture>
+    </a>
     <a href="mailto:yu.fujita89@gmail.comm" class="header__link"><span class="header__link-text">CONTACT</span></a>
   </header>
   <div class="mv">

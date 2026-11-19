@@ -377,11 +377,12 @@ background-color: var(--bg-color);
   /* スクロールダウンの位置 */
   .scroll {
     right: 3%;
+    bottom: 10%;
   }
   /* 線のアニメーション部分 */
   .scroll::before {
-    bottom: -80px;
-    height: 65px;
+    bottom: -13vh;
+    height: 12vh;
   }
 .contents{
     padding: 4rem 0 18rem 0;
